@@ -1,6 +1,4 @@
 # Installation
-##0 node IPs
-
 
 `vim /etc/hosts`
 
