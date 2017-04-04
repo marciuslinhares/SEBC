@@ -1,12 +1,16 @@
 # HDFS Lab: Replicate to another cluster
 
 # Generate data to replication
-`su hdfs -c "hdfs fsck /benchmark/marciuslinhares/ -files -blocks"`
+```
+su hdfs -c "hdfs fsck /benchmark/marciuslinhares/ -files -blocks"
+```
 
 
 # Data replication using distCp beteween me and my partners cluster
 
-´su hdfs -c "hadoop distcp hdfs://ec2-52-201-248-69.compute-1.amazonaws.com:8020/benchmark/marciuslinhares/ hdfs://ec2-34-207-208-5.compute-1.amazonaws.com:8020/benchmark/hugorodrigues-cds/"´
+```
+su hdfs -c "hadoop distcp hdfs://ec2-52-201-248-69.compute-1.amazonaws.com:8020/benchmark/marciuslinhares/ hdfs://ec2-34-207-208-5.compute-1.amazonaws.com:8020/benchmark/hugorodrigues-cds/"
+```
 
 # Data replicated
 

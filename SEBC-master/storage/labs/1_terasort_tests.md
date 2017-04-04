@@ -2,9 +2,13 @@
 
 # Teragen 
 
-´su hdfs -c "hadoop fs -mkdir /benchmark/datagen"´
+```
+su hdfs -c "hadoop fs -mkdir /benchmark/datagen"
+```
 
-´time su hdfs -c "hadoop jar /opt/cloudera/parcels/CDH-5.10.1-1.cdh5.10.1.p0.10/jars/hadoop-examples.jar teragen 50000000 /benchmark/datagen/data-5GB"´
+```
+time su hdfs -c "hadoop jar /opt/cloudera/parcels/CDH-5.10.1-1.cdh5.10.1.p0.10/jars/hadoop-examples.jar teragen 50000000 /benchmark/datagen/data-5GB"
+```
 
 
 [root@ip-172-31-26-86 ~]# time su hdfs -c "hadoop jar /opt/cloudera/parcels/CDH-5.10.1-1.cdh5.10.1.p0.10/jars/hadoop-examples.jar teragen 50000000 /benchmark/datagen/data-5GB"
@@ -73,9 +77,14 @@ sys     0m0.337s
 
 # Run the terasort command on this file 
 
-´su hdfs -c "hadoop fs -mkdir /user/marciuslinhares"´
-´time su hdfs -c "hadoop jar /opt/cloudera/parcels/CDH-5.10.1-1.cdh5.10.1.p0.10/jars/hadoop-examples.jar terasort -D mapred.maps.tasks=4 /benchmark/datagen/data-5GB /user/marciuslinhares/terasort-result"´
+```
+su hdfs -c "hadoop fs -mkdir /user/marciuslinhares"
+```
 
+```
+time su hdfs -c "hadoop jar /opt/cloudera/parcels/CDH-5.10.1-1.cdh5.10.1.p0.10/jars/hadoop-examples.jar terasort -D mapred.maps.tasks=4 /benchmark/datagen/data-5GB /user/marciuslinhares/terasort-result"
+
+```
 [root@ip-172-31-26-86 ~]# time su hdfs -c "hadoop jar /opt/cloudera/parcels/CDH-5.10.1-1.cdh5.10.1.p0.10/jars/hadoop-examples.jar terasort -D mapred.maps.tasks=4 /benchmark/datagen/data-5GB /user/marciuslinhares/terasort-result"
 17/04/04 16:59:30 INFO terasort.TeraSort: starting
 17/04/04 16:59:32 INFO input.FileInputFormat: Total input paths to process : 2
