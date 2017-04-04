@@ -41,6 +41,8 @@ tmpfs           1.5G     0  1.5G   0% /run/user/1000
 
 # 4 Disable transparent hugepage support
 
+`cat /boot/grub/grub.conf`
+
 [root@ip-172-31-26-86 ~]# cat /boot/grub/grub.conf
 default=0
 timeout=0
