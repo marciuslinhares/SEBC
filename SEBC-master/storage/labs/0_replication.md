@@ -14,6 +14,8 @@ su hdfs -c "hadoop distcp hdfs://ec2-52-201-248-69.compute-1.amazonaws.com:8020/
 
 # Data replicated
 
+```
+
 [root@ip-172-31-26-86 ~]# su hdfs -c "hdfs fsck /benchmark/marciuslinhares/ -files -blocks"
 Connecting to namenode via http://ip-172-31-26-86.ec2.internal:50070
 FSCK started by hdfs (auth:SIMPLE) from /172.31.26.86 for path /benchmark/marciuslinhares/ at Tue Apr 04 15:56:40 UTC 2017
@@ -44,3 +46,4 @@ Status: HEALTHY
  Number of racks:               1
 FSCK ended at Tue Apr 04 15:56:40 UTC 2017 in 3 milliseconds
 
+```

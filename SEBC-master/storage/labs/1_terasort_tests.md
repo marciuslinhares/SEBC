@@ -10,7 +10,7 @@ su hdfs -c "hadoop fs -mkdir /benchmark/datagen"
 time su hdfs -c "hadoop jar /opt/cloudera/parcels/CDH-5.10.1-1.cdh5.10.1.p0.10/jars/hadoop-examples.jar teragen 50000000 /benchmark/datagen/data-5GB"
 ```
 
-
+```
 [root@ip-172-31-26-86 ~]# time su hdfs -c "hadoop jar /opt/cloudera/parcels/CDH-5.10.1-1.cdh5.10.1.p0.10/jars/hadoop-examples.jar teragen 50000000 /benchmark/datagen/data-5GB"
 17/04/04 16:44:46 INFO client.RMProxy: Connecting to ResourceManager at ip-172-31-26-86.ec2.internal/172.31.26.86:8032
 17/04/04 16:44:46 INFO terasort.TeraGen: Generating 50000000 using 2
@@ -73,7 +73,7 @@ real    1m10.396s
 user    0m6.220s
 sys     0m0.337s
 [root@ip-172-31-26-86 ~]#
-
+```
 
 # Run the terasort command on this file 
 
@@ -83,6 +83,8 @@ su hdfs -c "hadoop fs -mkdir /user/marciuslinhares"
 
 ```
 time su hdfs -c "hadoop jar /opt/cloudera/parcels/CDH-5.10.1-1.cdh5.10.1.p0.10/jars/hadoop-examples.jar terasort -D mapred.maps.tasks=4 /benchmark/datagen/data-5GB /user/marciuslinhares/terasort-result"
+
+```
 
 ```
 [root@ip-172-31-26-86 ~]# time su hdfs -c "hadoop jar /opt/cloudera/parcels/CDH-5.10.1-1.cdh5.10.1.p0.10/jars/hadoop-examples.jar terasort -D mapred.maps.tasks=4 /benchmark/datagen/data-5GB /user/marciuslinhares/terasort-result"
@@ -244,5 +246,6 @@ real    2m54.791s
 user    0m8.658s
 sys     0m0.369s
 [root@ip-172-31-26-86 ~]#
+```
 
 
