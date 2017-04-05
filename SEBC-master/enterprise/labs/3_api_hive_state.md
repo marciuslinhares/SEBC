@@ -3,6 +3,7 @@
 ```
 curl -u 'marciuslinhares:cloudera' -X POST "http://54.175.38.36:7180/api/v14/clusters/marciuslinhares/services/hive/commands/stop"
 ```
+```
 [root@ip-172-31-26-86 ~]# curl -u 'marciuslinhares:cloudera' -X POST "http://54.175.38.36:7180/api/v14/clusters/marciuslinhares/services/hive/commands/stop"
 {
   "id" : 175,
@@ -14,12 +15,13 @@ curl -u 'marciuslinhares:cloudera' -X POST "http://54.175.38.36:7180/api/v14/clu
     "serviceName" : "hive"
   }
 }[root@ip-172-31-26-86 ~]#
-
+```
 
 # Start hive
 
 ```
 curl -u 'marciuslinhares:cloudera' -X POST "http://54.175.38.36:7180/api/v14/clusters/marciuslinhares/services/hive/commands/start"
+```
 ```
 [root@ip-172-31-26-86 ~]# curl -u 'marciuslinhares:cloudera' -X POST "http://54.175.38.36:7180/api/v14/clusters/marciuslinhares/services/hive/commands/start"
 {
@@ -32,14 +34,14 @@ curl -u 'marciuslinhares:cloudera' -X POST "http://54.175.38.36:7180/api/v14/clu
     "serviceName" : "hive"
   }
 }[root@ip-172-31-26-86 ~]#
-
+```
 
 # Hive check
 
 ```
 curl -u 'marciuslinhares:cloudera' -X GET "http://54.175.38.36:7180/api/v14/clusters/marciuslinhares/services/hive"
 ```
-
+```
 [root@ip-172-31-26-86 ~]# curl -u 'marciuslinhares:cloudera' -X GET "http://54.175.38.36:7180/api/v14/clusters/marciuslinhares/services/hive"
 {
   "name" : "hive",
@@ -68,4 +70,4 @@ curl -u 'marciuslinhares:cloudera' -X GET "http://54.175.38.36:7180/api/v14/clus
   "entityStatus" : "GOOD_HEALTH"
 }[root@ip-172-31-26-86 ~]#
 
-
+```
