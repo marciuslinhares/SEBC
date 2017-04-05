@@ -7,6 +7,7 @@ curl -u 'marciuslinhares:cloudera' http://54.175.38.36:7180/api/v2/cm/deployment
 
 # Result
 
+```
 {
   "timestamp" : "2017-04-05T13:46:46.717Z",
   "clusters" : [ {
@@ -809,3 +810,4 @@ curl -u 'marciuslinhares:cloudera' http://54.175.38.36:7180/api/v2/cm/deployment
     } ]
   }
 }[root@ip-172-31-26-86 ~]#
+```
