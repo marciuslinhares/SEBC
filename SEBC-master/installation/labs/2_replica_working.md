@@ -1,5 +1,5 @@
 ## 2 Replica Working
-
+```
 MariaDB [(none)]> show slave status \G
 *************************** 1. row ***************************
                Slave_IO_State: Waiting for master to send event
@@ -50,3 +50,5 @@ Master_SSL_Verify_Server_Cert: No
   Replicate_Ignore_Domain_Ids:
                 Parallel_Mode: conservative
 1 row in set (0.00 sec)
+
+```

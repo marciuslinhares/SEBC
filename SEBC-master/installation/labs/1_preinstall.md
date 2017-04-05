@@ -9,6 +9,7 @@
 
 `df -h`
 
+```
 [root@ip-172-31-26-86 ~]# df -h
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/xvda1       40G  3.6G   37G   9% /
@@ -20,12 +21,13 @@ tmpfs           7.2G     0  7.2G   0% /sys/fs/cgroup
 tmpfs           1.5G     0  1.5G   0% /run/user/1000
 [root@ip-172-31-26-86 ~]#
 
-
+```
 
 # 3 If you have ext-based volumes, list the reserve space setting
 
 `df -h`
 
+```
 [root@ip-172-31-26-86 ~]# df -h
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/xvda1       40G  3.6G   37G   9% /
@@ -36,13 +38,14 @@ tmpfs           7.2G     0  7.2G   0% /sys/fs/cgroup
 /dev/xvdb        37G   49M   35G   1% /mnt
 tmpfs           1.5G     0  1.5G   0% /run/user/1000
 [root@ip-172-31-26-86 ~]#
-
+```
 
 
 # 4 Disable transparent hugepage support
 
 `cat /boot/grub/grub.conf`
 
+```
 [root@ip-172-31-26-86 ~]# cat /boot/grub/grub.conf
 default=0
 timeout=0
@@ -58,12 +61,13 @@ title CentOS Linux 7 (3.10.0-327.10.1.el7.x86_64)
         initrd /boot/initramfs-3.10.0-327.10.1.el7.x86_64.img
 [root@ip-172-31-26-86 ~]#
 
-	
+```
 
 # 5 List your network interface configuration
 
 `ip addr`
 
+```
 [root@ip-172-31-26-86 ~]# ip addr
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -79,22 +83,24 @@ title CentOS Linux 7 (3.10.0-327.10.1.el7.x86_64)
        valid_lft forever preferred_lft forever
 [root@ip-172-31-26-86 ~]#
 
-
+```
 # 6 Show correct forward and reverse host lookups
 ## For /etc/hosts, use getent
 
 `getent hosts ec2-54-147-224-170.compute-1.amazonaws.com`
 
+```
 [root@ip-172-31-26-86 ~]# getent hosts ec2-54-147-224-170.compute-1.amazonaws.com
 172.31.24.88    ec2-54-147-224-170.compute-1.amazonaws.com
 [root@ip-172-31-26-86 ~]#
 
-
+```
 
 ## For DNS, use nslookup
 
 `nslookup ec2-54-204-94-159.compute-1.amazonaws.com`
 
+```
 [root@ip-172-31-24-88 ~]# nslookup ec2-54-204-94-159.compute-1.amazonaws.com
 Server:         172.31.0.2
 Address:        172.31.0.2#53
@@ -103,11 +109,12 @@ Non-authoritative answer:
 Name:   ec2-54-204-94-159.compute-1.amazonaws.com
 Address: 172.31.17.210
 
-
+```
 # 6 Show the nscd service is running
 
 `service nscd status`
 
+```
 [root@ip-172-31-26-86 ~]# service nscd status
 Redirecting to /bin/systemctl status  nscd.service
 ? nscd.service - Name Service Cache Daemon
@@ -131,11 +138,12 @@ Apr 04 00:10:18 ip-172-31-26-86.ec2.internal nscd[497]: 497 checking for monitor
 Hint: Some lines were ellipsized, use -l to show in full.
 [root@ip-172-31-26-86 ~]#
 
-
+```
 # 7 Show the ntpd service is  
 
 `service ntpd status`
 
+```
 [root@ip-172-31-26-86 ~]# service ntpd status
 Redirecting to /bin/systemctl status  ntpd.service
 ? ntpd.service - Network Time Service
@@ -158,6 +166,6 @@ Apr 04 00:38:31 ip-172-31-26-86.ec2.internal ntpd[9179]: 0.0.0.0 c012 02 freq_se
 Apr 04 00:38:38 ip-172-31-26-86.ec2.internal ntpd[9179]: 0.0.0.0 c615 05 clock_sync
 [root@ip-172-31-26-86 ~]#
 
-
+```
 
 
