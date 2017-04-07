@@ -9,10 +9,15 @@ AWS
 # List the nodes you are using by IP address and name
 
 ```
-1	ec2-52-23-156-153.compute-1.amazonaws.com	52.23.156.153	172.31.29.83	ip-172-31-29-83.ec2.internal	ip-172-31-29-83
-2	ec2-52-91-7-205.compute-1.amazonaws.com	52.91.7.205	172.31.17.118	ip-172-31-17-118.ec2.internal	ip-172-31-17-118
-3	ec2-54-82-171-26.compute-1.amazonaws.com	54.82.171.26	172.31.16.82	ip-172-31-16-82.ec2.internal	ip-172-31-16-82
-4	ec2-107-23-46-84.compute-1.amazonaws.com	107.23.46.84	172.31.29.66	ip-172-31-29-66.ec2.internal	ip-172-31-29-66
+[root@ip-172-31-29-83 ~]# cat /etc/hosts
+172.31.29.83 ip-172-31-29-83.ec2.internal ip-172-31-29-83
+172.31.17.118 ip-172-31-17-118.ec2.internal ip-172-31-17-118
+172.31.16.82 ip-172-31-16-82.ec2.internal ip-172-31-16-82
+1172.31.29.66 ip-172-31-29-66.ec2.internal ip-172-31-29-66
+127.0.0.1 localhost.localdomain localhost
+::1 localhost6.localdomain6 localhost6
+[root@ip-172-31-29-83 ~]#
+
 ```
 # List the Linux release you are using
 ```
@@ -157,6 +162,46 @@ barca:x:2026:ronaldo
 merengues:x:2020:neymar
 
 ```
+
+# Create the Issue Install MySQL or Install MariaDB as appropriate
+
+Use the appropriate YUM repository to install the package.
+
+```
+yum update && yum install wget unzip ntp vim bind-utils nscd ntpd MariaDB-server MariaDB-client oracle-j2sdk1.7 cloudera-manager-daemons cloudera-manager-server openldap-clients krb5-libs krb5-workstation -y
+
+```
+```
+cat > /etc/my.cnf <<EOF
+#
+# This group is read both both by the client and the server
+# use it for options that affect everything
+#
+[client-server]
+
+#
+# include all files from the config directory
+#
+!includedir /etc/my.cnf.d
+
+[mariadb]
+server-id=1
+bind-address=0.0.0.0
+log-bin=mariadb-bin
+binlog-format=ROW
+EOF
+```
+
+# Install the appropriate DB client package and JDBC connector jar
+
+```
+
+wget -c https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.41.tar.gz && tar zxvf mysql-connector-java-5.1.41.tar.gz && mkdir /usr/share/java && cp mysql-connector-java-5.1.41/mysql-connector-java-5.1.41-bin.jar /usr/share/java/mysql-connector-java.jar
+
+
+```
+
+
 
 
 
