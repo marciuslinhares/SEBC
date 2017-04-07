@@ -13,4 +13,9 @@ drwxr-xr-x   - hdfs   supergroup          0 2017-04-07 16:09 /user/ronaldo
 
 ```
 
+```
+curl -u 'marciuslinhares:cloudera' -X GET "http://34.207.116.84:7180/api/v14/clusters/marciuslinhares/services/hive"
+
+```
+
 
