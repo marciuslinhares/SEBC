@@ -1,5 +1,5 @@
 
-
+# Challenge Setup
 
 # List the cloud provider you are using (AWS, GCE, Azure, other)
 
@@ -163,6 +163,8 @@ merengues:x:2020:neymar
 
 ```
 
+# Challenge 1: Install a MySQL server
+
 # Create the Issue Install MySQL or Install MariaDB as appropriate
 
 Use the appropriate YUM repository to install the package.
@@ -198,9 +200,9 @@ EOF
 
 wget -c https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.41.tar.gz && tar zxvf mysql-connector-java-5.1.41.tar.gz && mkdir /usr/share/java && cp mysql-connector-java-5.1.41/mysql-connector-java-5.1.41-bin.jar /usr/share/java/mysql-connector-java.jar
 
-
 ```
 
+# Challenge 2: Install Cloudera Manager 5.9.x
 
 
 
