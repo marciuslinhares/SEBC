@@ -1,6 +1,6 @@
 ```
 
-[root@ip-172-31-22-23 cloudera-scm-server]# time su hdfs -c "hadoop jar /opt/cloudera/parcels/CDH-5.10.1-1.cdh5.10.1.p0.10/jars/hadoop-examples.jar teragen 65536000 /user/neymar/tgen640"
+[root@ip-172-31-22-23 cloudera-scm-server]# time su hdfs -c "hadoop jar /opt/cloudera/parcels/CDH-5.10.1-1.cdh5.10.1.p0.10/jars/hadoop-examples.jar teragen 65536000 /user/neymar/tgen640m"
 17/04/07 16:22:06 INFO client.RMProxy: Connecting to ResourceManager at ip-172-31-22-23.ec2.internal/172.31.22.23:8032
 17/04/07 16:22:07 INFO terasort.TeraGen: Generating 65536000 using 2
 17/04/07 16:22:07 INFO mapreduce.JobSubmitter: number of splits:2
